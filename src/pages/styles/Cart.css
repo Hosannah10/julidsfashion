@@ -1,0 +1,147 @@
+/* Cart.css — Styled for JuliD’s Fashion */
+
+/* Theme Colors */
+:root {
+  --bg: #070707;
+  --card: #0f0f0f;
+  --white: #fff;
+  --muted: #aaa;
+  --gold: #d9a100;
+  --danger: #a00;
+}
+
+/* Page Container */
+.cart-container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 18px;
+  color: var(--white);
+  font-family: Inter, sans-serif;
+}
+
+/* Heading */
+.cart-title {
+  font-size: 1.7rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+/* Empty cart message */
+.empty {
+  color: var(--muted);
+}
+
+/* Cart List Wrapper */
+.cart-list {
+  display: grid;
+  gap: 14px;
+}
+
+/* Cart Card */
+.cart-card {
+  display: flex;
+  gap: 14px;
+  background: var(--card);
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(217,161,0,0.07);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+/* Product Image */
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Item info */
+.cart-info {
+  flex: 1;
+}
+
+.cart-info h4 {
+  margin: 0 0 6px 0;
+}
+
+.price {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Action area */
+.cart-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  background: rgba(255,255,255,0.05);
+}
+
+.qty {
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+.remove-btn {
+  background: var(--danger);
+  border: none;
+  color: #fff;
+}
+
+/* Footer section */
+.cart-footer {
+  margin-top: 10px;
+  padding: 12px;
+  background: var(--card);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total {
+  font-size: 1.2rem;
+}
+
+.footer-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* Gold button */
+.btn-gold {
+  background: var(--gold);
+  border: none;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Clear button */
+.clear-btn {
+  background: rgba(255,255,255,0.05);
+}

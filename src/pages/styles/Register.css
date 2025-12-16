@@ -1,0 +1,15 @@
+@import "./Login.css";
+
+.auth-card h1 {
+  color: #d9a100;
+}
+
+.auth-card button {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.auth-card button:hover {
+  background-color: #d9a100;
+}
+

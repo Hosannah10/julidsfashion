@@ -1,0 +1,118 @@
+/* FULL PAGE WRAPPER */
+.checkout-container {
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CARD */
+.checkout-card {
+  background: #111;
+  color: #fff;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 25px rgba(255, 193, 7, 0.25);
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* TITLE */
+.checkout-card h1 {
+  font-family: "Playfair Display", serif;
+  color: #ffc107;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* SUBTEXT */
+.checkout-subtext {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+/* FORM */
+.checkout-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABEL */
+.checkout-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #d9a100;
+}
+
+/* INPUTS */
+.checkout-input {
+  margin-top: 0.3rem;
+  margin-bottom: 1.2rem;
+  padding: 0.9rem;
+  background: #000;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  color: #fff;
+  width: 100%;
+}
+
+.checkout-input:focus {
+  outline: none;
+  border-color: #ffc107;
+}
+
+/* BUTTON GROUP */
+.checkout-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 12px;
+}
+
+/* BUTTONS */
+.checkout-btn {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+/* GOLD BUTTON */
+.primary-btn {
+  background: #ffc107;
+  color: #000;
+}
+
+.primary-btn:hover {
+  background: #d9a100;
+}
+
+/* DARK BUTTON */
+.secondary-btn {
+  background: #222;
+  color: #fff;
+}
+
+.secondary-btn:hover {
+  background: #333;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

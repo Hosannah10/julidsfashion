@@ -1,0 +1,177 @@
+/* ShopOrders.css */
+
+/* Theme */
+:root {
+  --bg: #070707;
+  --card: #0f0f0f;
+  --muted: #aaa;
+  --gold: #d9a100;
+  --danger: #a00;
+  --white: #fff;
+}
+
+/* Page wrapper */
+.orders-container {
+  max-width: 1100px;
+  margin: 22px auto;
+  padding: 18px;
+  color: var(--white);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.orders-container h2 {
+  margin-bottom: 14px;
+  font-size: 1.6rem;
+  color: var(--gold);
+}
+
+/* Grid of cards */
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 14px;
+}
+
+/* Order Card */
+.order-card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(217,161,0,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.order-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.order-time {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Actions */
+.order-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Status Pill */
+.status-pill {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.status-pill.completed {
+  background: #d8f7dc;
+  color: #0b5b1a;
+}
+
+.status-pill.pending {
+  background: #f7f0c4;
+  color: #6b4900;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity .12s ease, transform .12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn.gold {
+  background: var(--gold);
+  color: #000;
+}
+
+.btn.primary {
+  background: var(--gold);
+  color: #000;
+}
+
+.btn.danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75); /* darker for better focus */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  width: 95%;
+  max-width: 720px; /* larger modal */
+  background: var(--card);
+  border-radius: 14px;
+  padding: 28px;
+  color: var(--white);
+  border: 1px solid rgba(217,161,0,0.1);
+  box-shadow: 0 12px 50px rgba(0,0,0,0.7);
+}
+
+.modal h3 {
+  margin: 0 0 18px 0;
+  color: var(--gold);
+  font-size: 1.8rem;      /* larger heading */
+  font-family: "Playfair Display", serif;
+}
+
+/* Content Container */
+.modal-content {
+  max-height: 500px;       /* more scroll space */
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Item Row */
+.modal-item {
+  display: flex;
+  gap: 22px;               /* more spacing */
+  padding: 14px 0;
+  align-items: center;
+  font-size: 1.15rem;      /* larger text */
+}
+
+.modal-item div div {
+  padding: 10px;
+}
+
+/* Bigger Image */
+.modal img {
+  width: 160px;            /* bigger image */
+  height: 160px;           /* bigger image */
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+

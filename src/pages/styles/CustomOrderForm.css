@@ -1,0 +1,76 @@
+.custom-container {
+  min-height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-card {
+  background: #111;
+  color: #fff;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 25px rgba(255, 193, 7, 0.2);
+  width: 100%;
+  max-width: 600px;
+}
+
+.custom-card h1 {
+  font-family: "Playfair Display", serif;
+  color: #ffc107;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.custom-card p {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.custom-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-card input,
+.custom-card textarea {
+  margin-bottom: 1rem;
+  padding: 0.9rem;
+  background: #000;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+
+.custom-card input:focus,
+.custom-card textarea:focus {
+  border-color: #ffc107;
+  outline: none;
+}
+
+.custom-card button {
+  background: #ffc107;
+  color: #000;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.custom-card button:hover {
+  background: #d9a100;
+}
+
+.gold-link {
+  color: #D9A100;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.gold-link:hover {
+  color: #FFC107;
+}
+

@@ -1,0 +1,212 @@
+.navbar {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  padding: 0.8rem 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(217, 161, 0, 0.15);
+  scroll-behavior: smooth;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.logo img {
+  height: 70px;
+  width: 50px;
+  object-fit: contain;
+}
+
+/* Center navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #d9a100;
+}
+
+/* Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid #d9a100;
+  transition: all 0.3s ease;
+}
+
+.btn.create-account {
+  /* background-color: #fff;
+  color: #d9a100; */
+  background-color: #ffc107;
+  color: #000;
+  border: 2px solid #d9a100;
+}
+
+.btn.create-account:hover {
+  background-color: #d9a100;
+  color: #000;
+}
+
+.btn.login {
+  background-color: #000;
+  color: #d9a100;
+  border: 2px solid #d9a100;
+}
+
+.btn.login:hover {
+  background-color: #d9a100;
+  color: #000;
+}
+
+/* Hamburger menu (for mobile) */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Open state for mobile menu */
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.active {
+    max-height: 300px;
+    padding: 1rem 0;
+  }
+
+  .nav-buttons {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
+.nav-item.active {
+  color: #d9a100;
+  font-weight: 600;
+}
+
+.profile-icon {
+  background: none;
+  border: none;
+  color: #ffc107;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.btn.logout {
+  background-color: #000;
+  color: #d9a100;
+  border: 2px solid #d9a100;
+}
+
+.btn.logout:hover {
+  background-color: #d9a100;
+  color: #000;
+}
+
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.profile-name {
+  color: #ffc107;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  /* text-transform: capitalize; */
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-name:hover {
+  color: #fff;
+  /* text-decoration: underline; */
+}
+
+.profile-static {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.profile-icon.static,
+.profile-name.static {
+  cursor: default !important;
+  pointer-events: none !important;
+  transition: none !important;
+}
+
+/* Remove hover color changes for static elements */
+.profile-icon.static:hover,
+.profile-name.static:hover {
+  color: #ffc107 !important;
+}
+
+
+
+
