@@ -1,20 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/Contact.css";
+import { useToast } from '../context/ToastContext';
+import { useAuth } from '../context/AuthContext';
+import { DUMMY_BASE } from "../services/api";
 
 const Contact: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
-  
-  const adminEmail = "julibell271@gmail.com";
+  const { showToast } = useToast();
+  const { user } = useAuth();
+  const adminEmail = "hosannahpatrick@gmail.com";
+
+  useEffect(() => {
+    if (user) {
+      setForm(prev => ({
+        ...prev,
+        name: user.name || "",
+        email: user.email || "",
+      }));
+    }
+  }, [user]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   const subject = encodeURIComponent("Contact Message / Inquiry");
+  //   const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\n${form.message}`);
+  //   window.location.href = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
+
+  //   setForm({ name: "", email: "", phone: "", message: "" });
+  // };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Contact Message / Inquiry");
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\n${form.message}`);
-    window.location.href = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
-    setForm({ name: "", email: "", phone: "", message: "" });
+    try {
+      await fetch(`${DUMMY_BASE}/contact/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      showToast("Message sent successfully", "success");
+      setForm({ name: "", email: "", phone: "", message: "" });
+    } catch {
+      showToast("Failed to send message", "error");
+    }
   };
 
   return (
