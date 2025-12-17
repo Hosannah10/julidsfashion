@@ -8,6 +8,7 @@ const Contact: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const { showToast } = useToast();
   const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const adminEmail = "hosannahpatrick@gmail.com";
 
   useEffect(() => {
@@ -23,27 +24,21 @@ const Contact: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   const subject = encodeURIComponent("Contact Message / Inquiry");
-  //   const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\n${form.message}`);
-  //   window.location.href = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
-
-  //   setForm({ name: "", email: "", phone: "", message: "" });
-  // };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     try {
-      await fetch(`${DUMMY_BASE}/api/contact/`, {
+      await fetch(`${DUMMY_BASE}/contact/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      showToast("Message sent successfully", "success");
+      showToast("Message sent successfully");
       setForm({ name: "", email: "", phone: "", message: "" });
     } catch {
-      showToast("Failed to send message", "error");
+      showToast("Failed to send message");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -61,7 +56,9 @@ const Contact: React.FC = () => {
           <input name="email" value={form.email} onChange={handleChange} placeholder="Email" required />
           <input name="phone" value={form.phone} onChange={handleChange} placeholder="Phone Number" required />
           <textarea name="message" value={form.message} onChange={handleChange} placeholder="Message" rows={6} required />
-          <button className="btn-primary" type="submit">Send Message</button>
+          <button className="btn-primary" type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </button>
         </form>
       </div>
     </section>
