@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Custom Order / Inquiry");
+    const subject = encodeURIComponent("Contact Message / Inquiry");
     const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\n${form.message}`);
     window.location.href = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
     setForm({ name: "", email: "", phone: "", message: "" });
@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
         <div className="contact-text">
           <h2>Contact Us</h2>
           <p>
-            Have a design in mind or want to make an enquiry? <p>We’d love to hear from you!</p>
+            Have a design in mind or want to make an inquiry? <p>We’d love to hear from you!</p>
           </p>
         </div>
         <form className="contact-form" onSubmit={handleSubmit}>
