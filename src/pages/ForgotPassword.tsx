@@ -65,7 +65,7 @@ const ForgotPassword: React.FC = () => {
             </form>
 
             <p className="auth-footer">
-              Remember your password? <a href="/login">Back to Login</a>
+              Remember your password? <Link to="/login">Back to Login</Link>
             </p>
           </>
         ) : (
