@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles/Register.css";
 import { useAuth } from "../context/AuthContext";
 import { useToast } from "../context/ToastContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { DUMMY_BASE } from "../services/api";
 
 const Register: React.FC = () => {
@@ -123,7 +123,7 @@ const Register: React.FC = () => {
         </form>
 
         <p className="auth-footer">
-          Already have an account? <a href="/login">Login here</a>
+          Already have an account? <Link to="/register">Login here</Link>
         </p>
       </div>
     </section>
