@@ -9,7 +9,6 @@ const Contact: React.FC = () => {
   const { showToast } = useToast();
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const adminEmail = "hosannahpatrick@gmail.com";
 
   useEffect(() => {
     if (user) {
