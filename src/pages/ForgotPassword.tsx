@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles/ForgotPassword.css";
+import { Link } from "react-router-dom";
 import { useToast } from "../context/ToastContext";
 import { DUMMY_BASE } from "../services/api";
 
@@ -73,7 +74,7 @@ const ForgotPassword: React.FC = () => {
             <p>
               If an account with <span>{email}</span> exists, a reset link has been sent.
             </p>
-            <a href="/login" className="back-login">Return to Login</a>
+            <Link to="/login" className="back-login">Return to Login</Link>
           </div>
         )}
       </div>
