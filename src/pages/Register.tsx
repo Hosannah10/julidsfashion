@@ -123,7 +123,7 @@ const Register: React.FC = () => {
         </form>
 
         <p className="auth-footer">
-          Already have an account? <Link to="/register">Login here</Link>
+          Already have an account? <Link to="/login">Login here</Link>
         </p>
       </div>
     </section>
