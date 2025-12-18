@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const DUMMY_BASE = 'http://127.0.0.1:8000/api';
+export const DUMMY_BASE = 'https://julidsfashion-backend-render.onrender.com/api';
 
 // helper to get fetch headers (for fetch-based calls)
 export function getAuthFetchHeaders(contentType = "application/json") {
