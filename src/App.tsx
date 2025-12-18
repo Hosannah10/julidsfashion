@@ -18,7 +18,7 @@ import ResetPassword from "./pages/ResetPassword";
 const App: React.FC = () => {
   return (
     <>
-      <main>
+      <main className="app-layout">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />

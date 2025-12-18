@@ -22,3 +22,16 @@ button { cursor: pointer; }
 
 /* small helper */
 .center { display:flex; align-items:center; justify-content:center; }
+
+/* Full-width sections (Hero, banners, image strips) */
+.full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.app-layout {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+

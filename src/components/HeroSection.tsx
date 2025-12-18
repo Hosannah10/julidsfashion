@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="home" className="hero">
+    <section id="home" className="full-width hero">
       <div className="overlay">
         <div className="hero-content">
           <h1 className="hero-title">
