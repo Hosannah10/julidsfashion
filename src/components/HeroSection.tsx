@@ -13,7 +13,10 @@ const HeroSection: React.FC = () => {
             Step Out in Confidence. <br /> Step Out in <span>JuliD’s Fashion World.</span>
           </h1>
           <p className="hero-subtext">
-            Discover timeless elegance and bespoke designs — crafted with precision and passion.
+            {/* Discover timeless elegance and bespoke designs — crafted with precision and passion. */}
+            {/* Elevate your style with JuliD’s Fashion World — where every stitch tells a story of elegance. */}
+            Elevate your style with JuliD’s Fashion World — where every outfit is a masterpiece.
+            {/* Elevate Your Style. Embrace Your Elegance. */}
           </p>
           <div className="hero-buttons">
             <button className="btn-primary" onClick={() => navigate("/shop")}>

@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("/images.jpg") center/cover no-repeat;
+  background: url("/hero.png") center/cover no-repeat;
   color: #fff;
   overflow: hidden;
 }

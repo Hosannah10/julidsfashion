@@ -24,10 +24,10 @@ button { cursor: pointer; }
 .center { display:flex; align-items:center; justify-content:center; }
 
 /* Full-width sections (Hero, banners, image strips) */
-.full-width {
+/* .full-width {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-}
+} */
 
 .app-layout {
   width: 100%;

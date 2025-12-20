@@ -14,7 +14,7 @@ const About: React.FC = () => (
           Founded by <strong>Juliet Bello</strong>, JuliD’s Fashion World is a Lagos-based fashion studio dedicated to crafting stylish, elegant, and timeless outfits. From ready-made corporate and casual wears to bespoke bridal and asoebi designs, our passion lies in bringing your fashion dreams to life.
         </p>
         <p>
-          Every piece we create embodies precision tailoring, comfort, and confidence — ensuring you don’t just wear fashion, but express personality and poise with every outfit.
+          Every piece we create embodies precise tailoring, comfort, and confidence — ensuring you don’t just wear fashion, but express personality and poise with every outfit.
         </p>
       </div>
     </div>
